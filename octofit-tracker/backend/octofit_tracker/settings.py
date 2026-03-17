@@ -11,15 +11,14 @@ VAR_CODESPACE_NAME = os.getenv('CODESPACE_NAME')
 VAR_CODESPACE_DOMAIN = '.app.github.dev'
 
 ALLOWED_HOSTS = [
-    f"{VAR_CODESPACE_NAME}-8000{VAR_CODESPACE_DOMAIN}",
-    'localhost',
-    '127.0.0.1',
-    '.github.dev'
+    f"{VAR_CODESPACE_NAME}-8000.app.github.dev",
+    "localhost",
+    "127.0.0.1"
 ]
 
 # Ez is kellhet a biztonságos kapcsolathoz
 CSRF_TRUSTED_ORIGINS = [
-    f"https://{VAR_CODESPACE_NAME}-8000{VAR_CODESPACE_DOMAIN}"
+    f"https://{VAR_CODESPACE_NAME}-8000.app.github.dev"
 ]
 # -----------------------------
 

@@ -1,12 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
+import os
 
-# Az URL útvonalak listája
-VAR_URL_PATTERNS = [
+# Base URL for Mona: https://$CODESPACE_NAME-8000.app.github.dev
+urlpatterns = [
     path('admin/', admin.site.urls),
-    # Ez a sor engedélyezi a REST API bejelentkezési felületét
     path('api-auth/', include('rest_framework.urls')),
 ]
-
-# Átadjuk a Django-nak a változót
-urlpatterns = VAR_URL_PATTERNS
